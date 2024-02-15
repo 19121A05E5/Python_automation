@@ -1,0 +1,20 @@
+name: Scheduled Job
+
+on:
+  schedule:
+    - cron: '18 09 * * *'  # Run every day at 5:15 PM
+
+jobs:
+  run_script:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+      
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.x'
+
+      - name: Run Python script
+        run: python csv_data.py

@@ -2,7 +2,7 @@ name: Scheduled Job
 
 on:
   schedule:
-    - cron: '18 07 * * *'  # Run every day at 5:15 PM
+    - cron: '18 09 * * *'  # Run every day at 5:15 PM
 
 jobs:
   run_script:
